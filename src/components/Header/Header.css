@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+image{
+    max-width: 100%;
+}
+
+.header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    /* position: sticky; */
+    top: 0;
+    z-index:100 ;
+    
+}
+
+
+.header_logo{
+    width: 100px;
+    object-fit: contain;
+    margin: 0 20px;
+    margin-top: 18px;
+    
+    
+}
+.header_locationIcon{
+    color: white;
+    margin-top: 0;
+    padding-right: 0;
+}
+.header_locationWrapper{
+        color: white;
+        clear: both;
+        display: inline-block;
+        white-space-collapse: collapse;
+        text-wrap: nowrap;
+        padding-right: 15px;
+    }
+
+.flag-logo{
+    width: 20px;
+    
+}
+.header_Language{
+    display: flex;
+    padding-left: 10px;
+}
+.language{
+    color: white;
+    font-size: 16px;
+}
+
+.header_lable-Dropdown{
+   
+    background-color: silver;
+    padding: 8px;
+    height: 15px;
+   
+   
+}
+.header_SearchIcon{
+    padding: 5px;
+    height: 21px !important;
+    background-color: orange;
+}
+.header_search{
+    display: flex;
+    flex: 1;
+    align-items:center;
+    border-radius: 24px;
+    position: sticky;
+}
+.header_searchinput{
+    height: 11px;
+     padding:10px;
+    border: none;
+    width: 100%;
+}
+.header_option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+.header_optionCart{
+    display: block;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+.shopping_cartIcon{
+    width: 25px;
+}
+
+.header_nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header_optionLineOne{
+    font-size: 10px;
+}
+.header_optionLineTwo{
+    font-size: 13px;
+    font-weight:800 ;
+
+}
+
+
+
+
