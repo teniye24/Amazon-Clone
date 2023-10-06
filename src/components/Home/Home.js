@@ -2,11 +2,9 @@ import React from "react";
 import "./Home.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-//  import Carousel from '../Carousal';
 
-// import banner from "./https://m.media-amazon.com/images/G/01/kindle/journeys/SVdxSFtFsFMWeBMB/NTI3YmI2Y2Et";
 import Product from "../Product/Product";
-import image2 from "./image/6a83d1a9b75648fc1491e44556401580d7a51aa830dbba6566836b4a.jpg";
+
 
 function Home() {
   return (
@@ -24,38 +22,38 @@ function Home() {
             <img
               className="home_image"
               src="https://m.media-amazon.com/images/I/71xbc-6rv7L._SX3000_.jpg"
-            />
+            alt="/"/>
           </div>
           <div>
             <img
               className="home_image"
               src="https://m.media-amazon.com/images/I/616qTQYQWIL._SX3000_.jpg"
-            />
+           alt="/" />
           </div>
           <div>
             <img
               className="home_image"
               src="https://m.media-amazon.com/images/I/61h2e3RYg0L._SX3000_.jpg"
-            />
+           alt="/" />
           </div>
           <div>
             <img
               className="home_image"
               src="https://m.media-amazon.com/images/I/61MgrX1LbyL._SX3000_.jpg"
-            />
+           alt="/" />
           </div>
 
           <div>
             <img
               className="home_image"
               src="https://m.media-amazon.com/images/I/71RyWxoEMrL._SX3000_.jpg"
-            />
+            alt="/"/>
           </div>
           <div>
             <img
               className="home_image"
               src="https://m.media-amazon.com/images/I/71xQNs4NeNL._SX3000_.jpg"
-            />
+           alt="" />
           </div>
         </Carousel>
 
@@ -102,14 +100,14 @@ function Home() {
             price={59.99}
             rating={4}
             image="https://m.media-amazon.com/images/I/51keHnu-7YL._AC_UL320_.jpg"
-          />
+         alt="/" />
           <Product
             id="12321343"
             title="Keurig 5000204976 K-Duo Essentials 2-in-1 Coffee Maker"
             price={99.96}
             rating={5}
             image="https://m.media-amazon.com/images/I/61dK-Bgo78L._AC_SX466_.jpg"
-            alt="/dpoop"
+            alt="/"
           />
 
           <Product
@@ -118,14 +116,14 @@ function Home() {
             price={159.99}
             rating={4}
             image="https://images-na.ssl-images-amazon.com/images/I/713FOOoJ-4L._AC_UL450_SR450,320_.jpg"
-          />
+         alt="/" />
           <Product
             id="3254354378"
             title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
             price={598.99}
             rating={4}
             image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
-          />
+         alt="/" />
         </div>
         <div className="home_row">
           <Product
@@ -134,7 +132,7 @@ function Home() {
             price={89.99}
             rating={5}
             image="https://m.media-amazon.com/images/I/81OzoiHGV3S._AC_SX360_SY250_.jpg"
-          />
+          alt="/"/>
 
           <Product
             id="23445978"
@@ -142,31 +140,23 @@ function Home() {
             price={98.99}
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/G/01/Audible/en_US/images/creative/amazon/GatewaySept23/23-0768-USNJACQ-AMZ-Gateway-BAU-Sep2023-Assets_Gateway_HUD_Card_Lifestyle1_1x_379x304_V01._SY304_CB598147133_.jpg"
-          />
+         alt="/" />
           <Product
             id="325435447"
             title="Oil Rubbed Bronze"
             price={35.98}
             rating={4}
             image="https://m.media-amazon.com/images/I/515x98ub2QL._SY500__AC_SY200_.jpg"
-          />
+         alt="/" />
           <Product
             id="234459363"
             title="Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
             price={98.99}
             rating={5}
             image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
-          />
+        alt= '/'  />
         </div>
-        <h2 className="Fashion_title">Luxury Stores Fashion</h2>
-        <Carousel
-          autoPlay
-          infiniteLoop
-          showStatus={false}
-          showIndicators={false}
-          showThumbs={false}
-          interval={2000}
-        >
+        
           <div className="home_row1">
             <Product
               id="23445478"
@@ -174,14 +164,14 @@ function Home() {
               price={4299.99}
               rating={5}
               image="https://m.media-amazon.com/images/I/71pQoveKpVL._MCnd_AC_UL500_.jpg"
-            />
+            alt = "/"/>
             <Product
               id="3254332584"
               title="EUDON CHOI Irena Top"
               price={295.0}
               rating={4}
               image="https://m.media-amazon.com/images/I/61jcTE89ecL._AC_UL500_.jpg"
-            />
+            alt= '/'/>
             <Product
               id="32543543689"
               title="PERFECT MOMENT Thermal Pant"
@@ -198,7 +188,7 @@ function Home() {
               alt="/"
             />
           </div>
-        </Carousel>
+       
 
         <div className="home_row">
           <Product
@@ -215,7 +205,7 @@ function Home() {
             price={98.99}
             rating={5}
             image="https://images-na.ssl-images-amazon.com/images/G/01/kindle/journeys/sAsKYtno5J2qog0B/ZjY1ZTNhMWIt-w379._SY304_CB578358349_.jpg"
-          />
+         alt="/" />
           <Product
             id="4528654345"
             title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
@@ -233,7 +223,7 @@ function Home() {
         </div>
       
           <div>
-            <h2 className="title_row">Innovations ready to make life easier</h2>
+            {/* <h2 className="title_row">Innovations ready to make life easier</h2> */}
 
             <div className="home_row">
               <Product

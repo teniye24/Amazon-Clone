@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./Payment.css"
-import CheckoutProduct from './CheckProduct'
+import CheckoutProduct from './CheckoutProduct'
 import { useStateValue } from './StateProvider'
 import { Link, useNavigate } from 'react-router-dom'
 import {CardElement, useStripe, useElements} from "@stripe/react-stripe-js"
@@ -24,12 +24,14 @@ function Payment() {
     const [clientSecret, setClientSecret]= useState(true);
     
     useEffect(() =>{
+     
       const getClientSecret = async () =>{
         const response = await axios({
           method : 'post',
-          url:`/payments/create?total=${getCartTotal(cart) * 100}`,
+          url:`/payments/create?total=${getCartTotal(cart)*100}`,
 
-        })
+        }).catch((err)=>console.log(err))
+        console.log(response);
         setClientSecret(response.data.clientSecret);
       }
       getClientSecret();
@@ -42,7 +44,7 @@ function Payment() {
         payment_method:{
           card:elements.getElement(CardElement),
         },
-      }) .then(({paymentIntent}) =>{
+      }).then(({paymentIntent}) =>{
        db.collection('user')
        .doc(user?.uid)
        .collection('orders')
@@ -50,24 +52,20 @@ function Payment() {
        .set({
         cart:cart,
         amount:paymentIntent.amount,
-        created:paymentIntent.created
-       })
+        created:paymentIntent.created,
+       });
         setSucceded(true);
         setError(null);
         setProcessing(false);
         dispatch({
           type: 'EMPTY_CART'
-        })
+        });
+         Navigate("/order");
       })
-      Navigate('/order')
-
-     }
+      
+    };
      
-
-
-
-
-    const handleChange = (event)=>{
+     const handleChange = (event)=>{
       setDisabled(event.empty);
       setError(event.error ? event.error.message: '')
     }

@@ -27,12 +27,14 @@ function Header() {
       <div>
         <LocationOnIcon className="header_locationIcon" />
       </div>
-      <div className="header_locationWrapper">
-       <span className="header_locatonWrapperOne">Delivering to</span>
+      <Link>
+        <div className="header_locationWrapper" >
+          <span className="header_locatonWrapperOne">Delivering to</span>
           <br />
-       
-        <span className="header_locationWrapperTwo">Choose location</span>
-      </div>
+
+          <span className="header_locationWrapperTwo">Choose location</span>
+        </div>
+      </Link>
       <div className="header_search">
         <input className="header_searchinput" type="text" />
         <SearchIcon className="header_SearchIcon" />
@@ -42,10 +44,9 @@ function Header() {
           <img className="flag-logo" src={flagLogo} alt="usFlag" />
         </div>
         <div className="language">EN</div>
-        
       </div>
       <div className="header_nav">
-        <Link to="/login">
+        <Link to={!user && "/login"} className="header__clearlink">
           <div onClick={handleAuthentication} className="header_option">
             <span className="header_optionLineOne">
               Hello, {!user ? "Guest" : user.email}
@@ -55,10 +56,12 @@ function Header() {
             </span>
           </div>
         </Link>
-        <div className="header_option">
-          <span className="header_optionLineOne">Returns</span>
-          <span className="header_optionLineTwo">& Orders</span>
-        </div>
+        <Link to="/orders" className="header__clearlink">
+          <div className="header_option">
+            <span className="header_optionLineOne">Returns</span>
+            <span className="header_optionLineTwo">& Orders</span>
+          </div>
+        </Link>
         <Link to="/checkout">
           <div className="header_optionCart">
             <ShoppingCartIcon className="shopping_cartIcon" />

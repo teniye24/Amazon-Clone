@@ -1,11 +1,6 @@
-import React from 'react'
-import "./Product.css"
-
+import React from 'react';
+import "./Product.css";
 import { useStateValue } from '../StateProvider';
-// import image1 from "./image/CatCard_2x_d_PTBYB_Dresses_1x._SY304_CB596926536_.jpg"
-
-
-
 function Product({container, id, title, image, price, rating, button}) {
   const [{cart}, dispatch] = useStateValue()
   const addToCart =() =>{
