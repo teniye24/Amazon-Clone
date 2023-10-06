@@ -12,6 +12,7 @@ import { auth } from "./components/Firebase";
 import Payment from "./components/Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import Orders from "./components/Orders";
 
 const promise = loadStripe(
   "pk_test_51NukRBB87da2k8vS8bUbzFQTJZWrNYqRJClqwRqEQqLmZNGFu02TGBOoUxeK5zVHw9OXfc8LSomLexbJ28qZBS9O00Km8s2Fmo"
@@ -51,12 +52,17 @@ function App() {
   // }, []);
   return (
     <Router>
-   
-    
       <div className="App">
         <Routes>
-        
-    
+          <Route
+            path="/orders"
+            element={
+              <>
+                <Header />
+                <Orders/>
+              </>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route
             path="/payment"
@@ -74,9 +80,8 @@ function App() {
             element={
               <>
                 <Header />
-                <Nav/>
+                <Nav />
                 <Home />
-                {/* <Nav/> */}
               </>
             }
           />
@@ -85,7 +90,7 @@ function App() {
             element={
               <>
                 <Header />
-                <Nav/>
+                <Nav />
                 <Checkout />
               </>
             }

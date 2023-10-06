@@ -110,6 +110,8 @@ image{
 
 }
 
-
+.header__clearlink{
+    text-decoration: none;
+}
 
 
